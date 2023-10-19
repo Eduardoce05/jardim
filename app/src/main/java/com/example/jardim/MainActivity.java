@@ -1,7 +1,6 @@
 package com.example.jardim;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,13 +25,17 @@ public class MainActivity extends AppCompatActivity {
         entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if ("admin".equals(usuario.getText().toString()) && "1234".equals(senha.getText().toString())){
-                    startActivity(new Intent());
-            }else{
-                    Toast erroAutenticacao = Toast.makeText(MainActivity.this, "Usuario e Senha invalido", Toast.LENGTH_SHORT);
+                String usuarioDigitado = usuario.getText().toString();
+                String senhaDigitada = senha.getText().toString();
+
+                if ("aluno".equals(usuarioDigitado) && "123".equals(senhaDigitada)) {
+                    Intent intent = new Intent(MainActivity.this, Home.class);
+                    startActivity(intent);
+                } else {
+                    Toast erroAutenticacao = Toast.makeText(MainActivity.this, "Usuário e/ou senha inválidos", Toast.LENGTH_SHORT);
                     erroAutenticacao.show();
                 }
-                }
+            }
         });
     }
 }

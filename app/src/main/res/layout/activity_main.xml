@@ -56,14 +56,18 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
         android:layout_marginTop="30dp"
+        android:layout_marginRight="120dp"
         android:text="@string/activity_main_esqueci" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
         android:layout_marginTop="30dp"
+        android:layout_marginRight="120dp"
         android:text="@string/activity_main_registrar" />
 
 </LinearLayout>
